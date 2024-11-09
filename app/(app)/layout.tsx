@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useClerk, useUser } from "@clerk/nextjs";
+import Image from "next/image";
 import {
   LogOutIcon,
   MenuIcon,
@@ -71,8 +72,10 @@ export default function AppLayout({
                 <>
                   <div className="avatar">
                     <div className="w-8 h-8 rounded-full">
-                      <img
+                      <Image
                         src={user.imageUrl}
+                        width={32}
+                        height={32}
                         alt={
                           user.username || user.emailAddresses[0].emailAddress
                         }

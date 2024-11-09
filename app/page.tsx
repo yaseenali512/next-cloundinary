@@ -48,6 +48,8 @@ export default function Home() {
           <Image
             src={images[currentIndex]}
             alt={`Image ${currentIndex + 1}`}
+            // width={1600}
+            // height={900}
             layout="fill"
             objectFit="cover"
             className="transition-all duration-20"
@@ -73,8 +75,8 @@ export default function Home() {
       {/* Feature Section */}
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-semibold white">Our Services</h2>
-          <p className="text-lg text-white mt-4">
+          <h2 className="text-3xl font-semibold text-black">Our Services</h2>
+          <p className="text-2xl text-black mt-4">
             Upload your media files, select the format, and download your
             optimized content.
           </p>

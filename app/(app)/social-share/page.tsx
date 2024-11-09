@@ -47,8 +47,7 @@ export default function SocialShare() {
 
       const data = await response.json();
       setUploadedImage(data.publicId);
-    } catch (error) {
-      console.log(error);
+    } catch {
       alert("Failed to upload image");
     } finally {
       setIsUploading(false);

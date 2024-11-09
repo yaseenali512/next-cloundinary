@@ -91,8 +91,7 @@ export async function POST(req: NextRequest) {
     });
 
     return NextResponse.json(vidoe);
-  } catch (error) {
-    console.error("upload video failed", error);
+  } catch {
     return NextResponse.json({ error: "Upload Video failed" }, { status: 500 });
   } finally {
     await prisma.$disconnect();

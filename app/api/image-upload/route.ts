@@ -59,8 +59,7 @@ export async function POST(req: NextRequest) {
       { publicId: uploadResult.public_id },
       { status: 200 }
     );
-  } catch (error) {
-    console.log(error);
+  } catch {
     return NextResponse.json({ error: "An error occurred" }, { status: 500 });
   }
 }
