@@ -5,8 +5,14 @@ import { Clock, Download, FileDown, FileUp } from "lucide-react";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 dayjs.extend(relativeTime);
+import { Video } from "@/types";
 
-function VideoCard({ video, onDownload }) {
+interface VideoCardProps {
+  video: Video;
+  onDownload: (url: string, title: string) => void;
+}
+
+const VideoCard: React.FC<VideoCardProps> = ({ video, onDownload }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [previewError, setPreviewError] = useState(false);
 
@@ -136,6 +142,5 @@ function VideoCard({ video, onDownload }) {
       </div>
     </div>
   );
-}
-
+};
 export default VideoCard;
